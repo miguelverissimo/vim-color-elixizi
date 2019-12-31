@@ -1,8 +1,14 @@
-Calm Spring Color Scheme for Vim [![Build Status][]][Travis CI]
-===============================================================
+Elixir optimized color scheme based on Spring Night
+=======================================================
 
-`spring-night` is a low contrast calm color scheme for Vim. It's colored with deep blue background,
-shiny yellow foreground and *sakura*:cherry_blossom: text selection.
+[spring-night](https://github.com/rhysd/vim-color-spring-night) is awesome. This fork optimizes it for elixir syntax.
+
+
+# Original Documentation
+
+# Calm Spring Color Scheme for Vim
+
+spring-night is a low contrast calm color scheme for Vim. It's colored with deep blue background, shiny yellow foreground and sakura🌸 text selection.
 
 - Both GUI/CUI 24bit colors and CUI 256 colors.
 - Aware of running Vim on translucent window.
