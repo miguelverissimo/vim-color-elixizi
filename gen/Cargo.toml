@@ -1,7 +1,7 @@
 [package]
-name = "gen-color-spring-night"
+name = "gen-color-elixizi"
 version = "0.0.0"
-authors = ["rhysd <lin90162@yahoo.co.jp>"]
+authors = ["Miguel Verissimo", "rhysd <lin90162@yahoo.co.jp>"]
 publish = false
 edition = "2018"
 

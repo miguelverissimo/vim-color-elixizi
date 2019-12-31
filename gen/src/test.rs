@@ -34,8 +34,8 @@ fn test_write_header() {
     };
     w.write_header().unwrap();
     let rendered = str::from_utf8(&w.out).unwrap();
-    assert!(rendered.starts_with(r#"" spring-night: Calm-colored dark color scheme"#));
-    assert!(rendered.contains("let g:colors_name = 'spring-night'"));
+    assert!(rendered.starts_with(r#"" Elixizi, a colorscheme based on spring-night"#));
+    assert!(rendered.contains("let g:colors_name = 'elixizi'"));
 }
 
 #[test]
@@ -88,10 +88,10 @@ fn test_write_contrast_color_variables() {
     };
     w.write_contrast_color_variables().unwrap();
     for (actual, expected) in [
-        "let s:goodbye_gui = g:spring_night_high_contrast ? '#000000' : '#ffffff'",
-        "let s:hello_gui = g:spring_night_high_contrast ? '#123456' : '#7890ab'",
-        "let s:hello_cterm = g:spring_night_high_contrast ? 123 : 234",
-        "let s:hi_cterm = g:spring_night_high_contrast ? 12 : 34",
+        "let s:goodbye_gui = g:elixizi_high_contrast ? '#000000' : '#ffffff'",
+        "let s:hello_gui = g:elixizi_high_contrast ? '#123456' : '#7890ab'",
+        "let s:hello_cterm = g:elixizi_high_contrast ? 123 : 234",
+        "let s:hi_cterm = g:elixizi_high_contrast ? 12 : 34",
         "",
     ]
     .iter()
@@ -112,7 +112,7 @@ fn test_write_highlight() {
         ((None, None, None, HighlightAttr::Bold),                              0, "exe 'hi' 'HL' 'term=NONE' s:bold_attr"),
         ((None, None, None, HighlightAttr::Italic),                            0, "exe 'hi' 'HL' 'term=NONE' s:italic_attr"),
         ((None, None, None, HighlightAttr::Underline),                         0, "hi HL term=NONE gui=underline cterm=underline"),
-        ((None, None, None, HighlightAttr::CommentItalic),                     0, "exe 'hi' 'HL' 'term=NONE' g:spring_night_italic_comments ? s:italic_attr : ''"),
+        ((None, None, None, HighlightAttr::CommentItalic),                     0, "exe 'hi' 'HL' 'term=NONE' g:elixizi_italic_comments ? s:italic_attr : ''"),
         ((None, None, None, HighlightAttr::Undercurl),                         0, "exe 'hi' 'HL' 'term=NONE' s:undercurl_attr"),
         ((Some("contrast"), None, None, HighlightAttr::Nothing),               0, "exe 'hi' 'HL' 'term=NONE' 'guifg='.s:contrast_gui 'ctermfg='.s:contrast_cterm"),
         ((None, Some("contrast"), None, HighlightAttr::Nothing),               0, "exe 'hi' 'HL' 'term=NONE' 'guibg='.s:contrast_gui 'ctermbg='.s:contrast_cterm"),
@@ -248,9 +248,9 @@ fn test_write_term_colors() {
 }
 
 #[test]
-fn test_spring_night_writer() {
+fn test_elixizi_writer() {
     // Check duplicate highlights
-    let w = spring_night_writer(Vec::new());
+    let w = elixizi_writer(Vec::new());
     let mut unique_check = HashSet::new();
     for hl in w.highlights {
         let name = match hl {
@@ -398,7 +398,7 @@ fn test_write_airline_theme() {
     w.write_airline_theme().unwrap();
     let rendered = str::from_utf8(&w.out).unwrap();
 
-    let re_var = Regex::new(r"^let g:airline#themes#spring_night#palette\.(\w+) =").unwrap();
+    let re_var = Regex::new(r"^let g:airline#themes#elixizi#palette\.(\w+) =").unwrap();
     let re_palette =
         Regex::new(r"^\\\s+'(red|airline_(a|b|c|x|y|z|error|warning))': \[('(#[[:xdigit:]]{6})?',\s*){2}((\d{1,3}|''),\s*){2}''\]").unwrap();
     for line in rendered.lines() {
@@ -416,7 +416,7 @@ fn test_write_airline_theme() {
                     );
                 }
                 None => assert!(
-                    line == "let g:airline#themes#spring_night#palette = {}",
+                    line == "let g:airline#themes#elixizi#palette = {}",
                     "Invalid variable definition: {}",
                     line
                 ),
