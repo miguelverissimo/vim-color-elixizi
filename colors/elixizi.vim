@@ -66,7 +66,7 @@ exe 'hi' 'Cursor' 'term=NONE' 'guifg='.s:bg_gui 'ctermfg=233' 'guibg=#fffeeb' 'c
 hi CursorColumn term=NONE guibg=#3a4b5c ctermbg=235
 hi CursorLine term=NONE guibg=#3a4b5c ctermbg=235 gui=NONE cterm=NONE
 hi CursorLineNr term=NONE guifg=#e7d5ff ctermfg=189 guibg=#536273 ctermbg=238
-hi Define term=NONE guifg=#7098e6 ctermfg=69
+hi Define term=NONE guifg=#a8d2eb ctermfg=153
 hi Directory term=NONE guifg=#a9dd9d ctermfg=150
 hi EndOfBuffer term=NONE guifg=#536273 ctermfg=238
 exe 'hi' 'Error' 'term=NONE' 'guifg=#fd8489' 'ctermfg=210' 'guibg=#3a4b5c' 'ctermbg=235' s:bold_attr
@@ -75,7 +75,7 @@ hi Float term=NONE guifg=#fd8489 ctermfg=210
 exe 'hi' 'NormalFloat' 'term=NONE' 'guifg=#fffeeb' 'ctermfg='.s:fg_cterm 'guibg='.s:bgweaker_gui 'ctermbg=235'
 hi FoldColumn term=NONE guifg=#e7d5ff ctermfg=189 guibg=#3a4b5c ctermbg=235
 hi Folded term=NONE guifg=#e7d5ff ctermfg=189 guibg=#646f7c ctermbg=60
-hi Function term=NONE guifg=#7098e6 ctermfg=69
+hi Function term=NONE guifg=#f0aa8a ctermfg=216
 exe 'hi' 'Identifier' 'term=NONE' 'guifg=#fedf81' 'ctermfg=222' s:italic_attr
 hi IncSearch term=NONE guifg=NONE ctermfg=NONE guibg=#a9667a ctermbg=132 gui=underline cterm=underline
 exe 'hi' 'Keyword' 'term=NONE' 'guifg=#f0eaaa' 'ctermfg=229' s:bold_attr
@@ -87,12 +87,12 @@ hi MoreMsg term=NONE guifg=#a9dd9d ctermfg=150
 hi NonText term=NONE guifg=#646f7c ctermfg=60
 exe 'hi' 'Normal' 'term=NONE' 'guifg=#fffeeb' 'ctermfg='.s:fg_cterm 'guibg='.s:bg_gui 'ctermbg=233'
 hi Number term=NONE guifg=#fd8489 ctermfg=210
-hi Operater term=NONE guifg=#7098e6 ctermfg=69
+hi Operater term=NONE guifg=#a8d2eb ctermfg=153
 hi Pmenu term=NONE guifg=#e7d5ff ctermfg=189 guibg=#3a4b5c ctermbg=235
 hi PmenuSbar term=NONE guifg=#fedf81 ctermfg=222 guibg=#536273 ctermbg=238
 hi PmenuSel term=NONE guifg=#fedf81 ctermfg=222 guibg=#536273 ctermbg=238
 hi PmenuThumb term=NONE guifg=#fedf81 ctermfg=222 guibg=#8d9eb2 ctermbg=103
-hi PreProc term=NONE guifg=#7098e6 ctermfg=69
+hi PreProc term=NONE guifg=#a8d2eb ctermfg=153
 hi Question term=NONE guifg=#a8d2eb ctermfg=153
 hi Search term=NONE guifg=NONE ctermfg=NONE guibg=#605779 ctermbg=60 gui=underline cterm=underline
 exe 'hi' 'SignColumn' 'term=NONE' 'guifg=#fffeeb' 'ctermfg='.s:fg_cterm 'guibg=#3a4b5c' 'ctermbg=235'
