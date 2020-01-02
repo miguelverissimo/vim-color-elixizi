@@ -582,6 +582,8 @@ fn elixizi_writer<'a, W: io::Write>(out: W) -> Writer<'a, W> {
         color_name!(darkblue,   normal("#00091e"),              normal(235));
         color_name!(blue,       normal("#7098e6"),              normal(69));
         color_name!(paleblue,   normal("#98b8e6"),              normal(111));
+        color_name!(elixirblue, normal("#77dcff"),              normal(117));
+        color_name!(justblue,   normal("#40b2e0"),              normal(74));
         color_name!(lime,       normal("#c9fd88"),              normal(149));
         color_name!(palesakura, normal("#e996aa"),              normal(175));
         color_name!(whitepink,  normal("#ebeadb"),              normal(224));
@@ -606,7 +608,7 @@ fn elixizi_writer<'a, W: io::Write>(out: W) -> Writer<'a, W> {
         Always(fgbg!(CursorColumn,          -,          bgemphasis,   Nothing)),
         Always(fgbg!(CursorLine,            -,          bgemphasis,   None)),
         Always(fgbg!(CursorLineNr,          purple,     bgstrong,     Nothing)),
-        Always(fgbg!(Define,                paleblue,     -,            Nothing)),
+        Always(fgbg!(Define,                elixirblue, -,            Nothing)),
         Always(fgbg!(Directory,             green,      -,            Nothing)),
         Always(fgbg!(EndOfBuffer,           bgstrong,   -,            Nothing)),
         Always(fgbg!(Error,                 red,        bgemphasis,   Bold)),
@@ -627,12 +629,12 @@ fn elixizi_writer<'a, W: io::Write>(out: W) -> Writer<'a, W> {
         Always(fgbg!(NonText,               light,      -,            Nothing)),
         Always(fgbg!(Normal,                fg,         bg,           Nothing)),
         Always(fgbg!(Number,                red,        -,            Nothing)),
-        Always(fgbg!(Operater,              paleblue,     -,            Nothing)),
+        Always(fgbg!(Operater,              elixirblue, -,            Nothing)),
         Always(fgbg!(Pmenu,                 purple,     bgemphasis,   Nothing)),
         Always(fgbg!(PmenuSbar,             gold,       bgstrong,     Nothing)),
         Always(fgbg!(PmenuSel,              gold,       bgstrong,     Nothing)),
         Always(fgbg!(PmenuThumb,            gold,       weakfg,       Nothing)),
-        Always(fgbg!(PreProc,               paleblue,     -,            Nothing)),
+        Always(fgbg!(PreProc,               elixirblue, -,            Nothing)),
         Always(fgbg!(Question,              skyblue,    -,            Nothing)),
         Always(fgbg!(Search,                NONE,       darkpurple,   Underline)),
         Always(fgbg!(SignColumn,            fg,         bgemphasis,   Nothing)),
