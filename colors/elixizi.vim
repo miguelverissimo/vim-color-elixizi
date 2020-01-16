@@ -55,7 +55,7 @@ let s:bgweaker_gui = g:elixizi_high_contrast ? '#213243' : '#3a4b5c'
 let s:darkgold_gui = g:elixizi_high_contrast ? '#484000' : '#685800'
 let s:fg_cterm = g:elixizi_high_contrast ? 231 : 230
 
-hi Boolean term=NONE guifg=#fd8489 ctermfg=210
+hi Boolean term=NONE guifg=#fd8489 cvim-color-elixizitermfg=210
 hi Character term=NONE guifg=#a9dd9d ctermfg=150
 hi ColorColumn term=NONE guibg=#536273 ctermbg=238
 exe 'hi' 'Comment' 'term=NONE' 'guifg=#8d9eb2' 'ctermfg=103' g:elixizi_italic_comments ? s:italic_attr : ''

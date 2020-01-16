@@ -551,231 +551,236 @@ fn elixizi_writer<'a, W: io::Write>(out: W) -> Writer<'a, W> {
             }
         }
 
-        color_name!(bg,         contrast("#132132", "#334152"), normal(233));
-        color_name!(bgweaker,   contrast("#213243", "#3a4b5c"), normal(235));
-        color_name!(bgemphasis, normal("#3a4b5c"),              normal(235));
-        color_name!(bglight,    normal("#435060"),              normal(236));
-        color_name!(bgstrong,   normal("#536273"),              normal(238));
-        color_name!(fg,         normal("#fffeeb"),              contrast(231, 230));
-        color_name!(hiddenfg,   normal("#607080"),              normal(60));
-        color_name!(weakfg,     normal("#8d9eb2"),              normal(103));
-        color_name!(weakerfg,   normal("#788898"),              normal(102));
-        color_name!(palepink,   normal("#e7c6b7"),              normal(181));
-        color_name!(yellow,     normal("#f0eaaa"),              normal(229));
-        color_name!(white,      normal("#ffffff"),              normal(231));
-        color_name!(purple,     normal("#e7d5ff"),              normal(189));
-        color_name!(darkpurple, normal("#605779"),              normal(60));
-        color_name!(gray,       normal("#545f6e"),              normal(59));
-        color_name!(light,      normal("#646f7c"),              normal(60));
-        color_name!(yaezakura,  normal("#70495d"),              normal(95));
-        color_name!(sakura,     normal("#a9667a"),              normal(132));
-        color_name!(orange,     normal("#f0aa8a"),              normal(216));
-        color_name!(green,      normal("#a9dd9d"),              normal(150));
-        color_name!(darkgreen,  normal("#5f8770"),              normal(65));
-        color_name!(skyblue,    normal("#a8d2eb"),              normal(153));
-        color_name!(gold,       normal("#fedf81"),              normal(222));
-        color_name!(darkgold,   contrast("#484000", "#685800"), normal(58));
-        color_name!(red,        normal("#fd8489"),              normal(210));
-        color_name!(mildred,    normal("#ab6560"),              normal(167));
-        color_name!(crimson,    normal("#ff6a6f"),              normal(203));
-        color_name!(mikan,      normal("#fb8965"),              normal(209));
-        color_name!(darkblue,   normal("#00091e"),              normal(235));
-        color_name!(blue,       normal("#7098e6"),              normal(69));
-        color_name!(paleblue,   normal("#98b8e6"),              normal(111));
-        color_name!(elixirblue, normal("#77dcff"),              normal(117));
-        color_name!(justblue,   normal("#40b2e0"),              normal(74));
-        color_name!(lime,       normal("#c9fd88"),              normal(149));
-        color_name!(palesakura, normal("#e996aa"),              normal(175));
-        color_name!(whitepink,  normal("#ebeadb"),              normal(224));
-        color_name!(whitegreen, normal("#eaf0aa"),              normal(194));
-        color_name!(whiteblue,  normal("#d8e2f0"),              normal(195));
-        color_name!(whitered,   normal("#ffbfaf"),              normal(217));
-        color_name!(inu,        normal("#ddbc96"),              normal(180));
+        color_name!(bg,           contrast("#132132", "#334152"), normal(233));
+        color_name!(bgweaker,     contrast("#213243", "#3a4b5c"), normal(235));
+        color_name!(bgemphasis,   normal("#3a4b5c"),              normal(235));
+        color_name!(bglight,      normal("#435060"),              normal(236));
+        color_name!(bgstrong,     normal("#536273"),              normal(238));
+        color_name!(fg,           normal("#fffeeb"),              contrast(231, 230));
+        color_name!(hiddenfg,     normal("#607080"),              normal(60));
+        color_name!(weakfg,       normal("#8d9eb2"),              normal(103));
+        color_name!(weakerfg,     normal("#788898"),              normal(102));
+        color_name!(palepink,     normal("#e7c6b7"),              normal(181));
+        color_name!(yellow,       normal("#f0eaaa"),              normal(229));
+        color_name!(white,        normal("#ffffff"),              normal(231));
+        color_name!(purple,       normal("#e7d5ff"),              normal(189));
+        color_name!(darkpurple,   normal("#605779"),              normal(60));
+        color_name!(gray,         normal("#545f6e"),              normal(59));
+        color_name!(light,        normal("#646f7c"),              normal(60));
+        color_name!(yaezakura,    normal("#70495d"),              normal(95));
+        color_name!(sakura,       normal("#a9667a"),              normal(132));
+        color_name!(orange,       normal("#f0aa8a"),              normal(216));
+        color_name!(green,        normal("#a9dd9d"),              normal(150));
+        color_name!(darkgreen,    normal("#5f8770"),              normal(65));
+        color_name!(skyblue,      normal("#a8d2eb"),              normal(153));
+        color_name!(gold,         normal("#fedf81"),              normal(222));
+        color_name!(darkgold,     contrast("#484000", "#685800"), normal(58));
+        color_name!(red,          normal("#fd8489"),              normal(210));
+        color_name!(mildred,      normal("#ab6560"),              normal(167));
+        color_name!(crimson,      normal("#ff6a6f"),              normal(203));
+        color_name!(mikan,        normal("#fb8965"),              normal(209));
+        color_name!(darkblue,     normal("#00091e"),              normal(235));
+        color_name!(blue,         normal("#7098e6"),              normal(69));
+        color_name!(paleblue,     normal("#98b8e6"),              normal(111));
+        color_name!(justblue,     normal("#40b2e0"),              normal(74));
+        color_name!(lime,         normal("#c9fd88"),              normal(149));
+        color_name!(palesakura,   normal("#e996aa"),              normal(175));
+        color_name!(whitepink,    normal("#ebeadb"),              normal(224));
+        color_name!(whitegreen,   normal("#eaf0aa"),              normal(194));
+        color_name!(whiteblue,    normal("#d8e2f0"),              normal(195));
+        color_name!(whitered,     normal("#ffbfaf"),              normal(217));
+        color_name!(inu,          normal("#ddbc96"),              normal(180));
+
+        color_name!(elixirblue,   normal("#77dcff"),              normal(117));
+        color_name!(palesalmon,   normal("#f1c1b9"),              normal(217));
+        color_name!(palepink,     normal("#e9cfec"),              normal(189));
+        color_name!(sadgreen,     normal("#b0cba6"),              normal(189));
+        color_name!(funkyyellow,  normal("#e9c062"),              normal(189));
     }
     let table = table;
 
     #[cfg_attr(rustfmt, rustfmt_skip)]
     let highlights = &[
         // Normal colors
-        Always(fgbg!(Boolean,               red,        -,            Nothing)),
-        Always(fgbg!(Character,             green,      -,            Nothing)),
-        Always(fgbg!(ColorColumn,           -,          bgstrong,     Nothing)),
-        Always(fgbg!(Comment,               weakfg,     -,            CommentItalic)),
-        Always(fgbg!(Conceal,               mikan,      bg,           Nothing)),
-        Always(fgbg!(Conditional,           skyblue,    -,            Nothing)),
-        Always(fgbg!(Constant,              red,        -,            Nothing)),
-        Always(fgbg!(Cursor,                bg,         fg,           Nothing)),
-        Always(fgbg!(CursorColumn,          -,          bgemphasis,   Nothing)),
-        Always(fgbg!(CursorLine,            -,          bgemphasis,   None)),
-        Always(fgbg!(CursorLineNr,          purple,     bgstrong,     Nothing)),
-        Always(fgbg!(Define,                elixirblue, -,            Nothing)),
-        Always(fgbg!(Directory,             green,      -,            Nothing)),
-        Always(fgbg!(EndOfBuffer,           bgstrong,   -,            Nothing)),
-        Always(fgbg!(Error,                 red,        bgemphasis,   Bold)),
-        Always(fgbg!(ErrorMsg,              red,        bg,           Bold)),
-        Always(fgbg!(Float,                 red,        -,            Nothing)),
-        Always(fgbg!(NormalFloat,           fg,         bgweaker,     Nothing)),
-        Always(fgbg!(FoldColumn,            purple,     bgemphasis,   Nothing)),
-        Always(fgbg!(Folded,                purple,     light,        Nothing)),
-        Always(fgbg!(Function,              orange,     -,            Nothing)),
-        Always(fgbg!(Identifier,            gold,       -,            Italic)),
-        Always(fgbg!(IncSearch,             NONE,       sakura,       Underline)),
-        Always(fgbg!(Keyword,               yellow,     -,            Bold)),
-        Always(fgbg!(Label,                 skyblue,    -,            Nothing)),
-        Always(fgbg!(LineNr,                weakerfg,   bgemphasis,   Nothing)),
-        Always(fgbg!(MatchParen,            bg,         sakura,       Bold)),
-        Always(fgbg!(ModeMsg,               gold,       -,            Nothing)),
-        Always(fgbg!(MoreMsg,               green,      -,            Nothing)),
-        Always(fgbg!(NonText,               light,      -,            Nothing)),
-        Always(fgbg!(Normal,                fg,         bg,           Nothing)),
-        Always(fgbg!(Number,                red,        -,            Nothing)),
-        Always(fgbg!(Operater,              elixirblue, -,            Nothing)),
-        Always(fgbg!(Pmenu,                 purple,     bgemphasis,   Nothing)),
-        Always(fgbg!(PmenuSbar,             gold,       bgstrong,     Nothing)),
-        Always(fgbg!(PmenuSel,              gold,       bgstrong,     Nothing)),
-        Always(fgbg!(PmenuThumb,            gold,       weakfg,       Nothing)),
-        Always(fgbg!(PreProc,               elixirblue, -,            Nothing)),
-        Always(fgbg!(Question,              skyblue,    -,            Nothing)),
-        Always(fgbg!(Search,                NONE,       darkpurple,   Underline)),
-        Always(fgbg!(SignColumn,            fg,         bgemphasis,   Nothing)),
-        Always(fgbg!(Special,               yellow,     -,            Bold)),
-        Always(fgbg!(SpecialKey,            hiddenfg,   -,            Nothing)),
+        Always(fgbg!(Boolean,               red,            -,            Nothing)),
+        Always(fgbg!(Character,             green,          -,            Nothing)),
+        Always(fgbg!(ColorColumn,           -,              bgstrong,     Nothing)),
+        Always(fgbg!(Comment,               weakfg,         -,            CommentItalic)),
+        Always(fgbg!(Conceal,               mikan,          bg,           Nothing)),
+        Always(fgbg!(Conditional,           skyblue,        -,            Nothing)),
+        Always(fgbg!(Constant,              red,            -,            Nothing)),
+        Always(fgbg!(Cursor,                bg,             fg,           Nothing)),
+        Always(fgbg!(CursorColumn,          -,              bgemphasis,   Nothing)),
+        Always(fgbg!(CursorLine,            -,              bgemphasis,   None)),
+        Always(fgbg!(CursorLineNr,          purple,         bgstrong,     Nothing)),
+        Always(fgbg!(Define,                elixirblue,     -,            Nothing)),
+        Always(fgbg!(Directory,             green,          -,            Nothing)),
+        Always(fgbg!(EndOfBuffer,           bgstrong,       -,            Nothing)),
+        Always(fgbg!(Error,                 red,            bgemphasis,   Bold)),
+        Always(fgbg!(ErrorMsg,              red,            bg,           Bold)),
+        Always(fgbg!(Float,                 red,            -,            Nothing)),
+        Always(fgbg!(NormalFloat,           fg,             bgweaker,     Nothing)),
+        Always(fgbg!(FoldColumn,            purple,         bgemphasis,   Nothing)),
+        Always(fgbg!(Folded,                purple,         light,        Nothing)),
+        Always(fgbg!(Function,              funkyyellow,    -,            Nothing)),
+        Always(fgbg!(Identifier,            gold,           -,            Italic)),
+        Always(fgbg!(IncSearch,             NONE,           sakura,       Underline)),
+        Always(fgbg!(Keyword,               yellow,         -,            Bold)),
+        Always(fgbg!(Label,                 skyblue,        -,            Nothing)),
+        Always(fgbg!(LineNr,                weakerfg,       bgemphasis,   Nothing)),
+        Always(fgbg!(MatchParen,            bg,             sakura,       Bold)),
+        Always(fgbg!(ModeMsg,               gold,           -,            Nothing)),
+        Always(fgbg!(MoreMsg,               green,          -,            Nothing)),
+        Always(fgbg!(NonText,               light,          -,            Nothing)),
+        Always(fgbg!(Normal,                fg,             bg,           Nothing)),
+        Always(fgbg!(Number,                red,            -,            Nothing)),
+        Always(fgbg!(Operater,              elixirblue,     -,            Nothing)),
+        Always(fgbg!(Pmenu,                 purple,         bgemphasis,   Nothing)),
+        Always(fgbg!(PmenuSbar,             gold,           bgstrong,     Nothing)),
+        Always(fgbg!(PmenuSel,              gold,           bgstrong,     Nothing)),
+        Always(fgbg!(PmenuThumb,            gold,           weakfg,       Nothing)),
+        Always(fgbg!(PreProc,               elixirblue,     -,            Nothing)),
+        Always(fgbg!(Question,              skyblue,        -,            Nothing)),
+        Always(fgbg!(Search,                NONE,           darkpurple,   Underline)),
+        Always(fgbg!(SignColumn,            fg,             bgemphasis,   Nothing)),
+        Always(fgbg!(Special,               yellow,         -,            Bold)),
+        Always(fgbg!(SpecialKey,            hiddenfg,       -,            Nothing)),
         Switch(
-            fgbgsp!(SpellBad,               red,        -,    red,    Undercurl),
-            fgbgsp!(SpellBad,               red,        NONE, red,    Undercurl),
+            fgbgsp!(SpellBad,               red,            -,    red,    Undercurl),
+            fgbgsp!(SpellBad,               red,            NONE, red,    Undercurl),
         ),
         Switch(
-            fgbgsp!(SpellCap,               purple,     -,    purple, Undercurl),
-            fgbgsp!(SpellCap,               purple,     NONE, purple, Undercurl),
+            fgbgsp!(SpellCap,               purple,         -,    purple, Undercurl),
+            fgbgsp!(SpellCap,               purple,         NONE, purple, Undercurl),
         ),
         Switch(
-            fgbgsp!(SpellLocal,             red,        -,    red,    Undercurl),
-            fgbgsp!(SpellLocal,             red,        NONE, red,    Undercurl),
+            fgbgsp!(SpellLocal,             red,            -,    red,    Undercurl),
+            fgbgsp!(SpellLocal,             red,            NONE, red,    Undercurl),
         ),
         Switch(
-            fgbgsp!(SpellRare,              yellow,     -,    yellow, Undercurl),
-            fgbgsp!(SpellRare,              yellow,     NONE, yellow, Undercurl),
+            fgbgsp!(SpellRare,              yellow,         -,    yellow, Undercurl),
+            fgbgsp!(SpellRare,              yellow,         NONE, yellow, Undercurl),
         ),
-        Always(fgbg!(Statement,             skyblue,    -,            Nothing)),
-        Always(fgbg!(StatusLine,            fg,         bgstrong,     Bold)),
-        Always(fgbg!(StatusLineNC,          weakfg,     bgemphasis,   None)),
-        Always(fgbg!(StatusLineTerm,        fg,         bgstrong,     Bold)),
-        Always(fgbg!(StatusLineTermNC,      weakfg,     bgemphasis,   None)),
-        Always(fgbg!(StorageClass,          gold,       -,            Italic)),
-        Always(fgbg!(String,                green,      -,            Nothing)),
-        Always(fgbg!(TabLine,               weakfg,     bgstrong,     Nothing)),
-        Always(fgbg!(TabLineFill,           bgemphasis, -,            Nothing)),
-        Always(fgbg!(TabLineSel,            gold,       bg,           Bold)),
-        Always(fgbg!(Tag,                   orange,     -,            Nothing)),
-        Always(fgbg!(Title,                 gold,       -,            Bold)),
-        Always(fgbg!(Todo,                  bg,         red,          Bold)),
-        Always(fgbg!(ToolbarButton,         gold,       bg,           Bold)),
-        Always(fgbg!(ToolbarLine,           weakfg,     bgstrong,     Nothing)),
-        Always(fgbg!(Type,                  gold,       -,            Nothing)),
-        Always(fgbg!(Underlined,            skyblue,    -,            Underline)),
-        Always(fgbg!(VertSplit,             bgemphasis, bg,           Nothing)),
-        Always(fgbg!(Visual,                -,          yaezakura,    Nothing)),
-        Always(fgbg!(WarningMsg,            mikan,      bgemphasis,   Nothing)),
-        Always(fgbg!(WildMenu,              bg,         gold,         Nothing)),
+        Always(fgbg!(Statement,             skyblue,        -,            Nothing)),
+        Always(fgbg!(StatusLine,            fg,             bgstrong,     Bold)),
+        Always(fgbg!(StatusLineNC,          weakfg,         bgemphasis,   None)),
+        Always(fgbg!(StatusLineTerm,        fg,             bgstrong,     Bold)),
+        Always(fgbg!(StatusLineTermNC,      weakfg,         bgemphasis,   None)),
+        Always(fgbg!(StorageClass,          gold,           -,            Italic)),
+        Always(fgbg!(String,                sadgreen,       -,            Nothing)),
+        Always(fgbg!(TabLine,               weakfg,         bgstrong,     Nothing)),
+        Always(fgbg!(TabLineFill,           bgemphasis,     -,            Nothing)),
+        Always(fgbg!(TabLineSel,            gold,           bg,           Bold)),
+        Always(fgbg!(Tag,                   funkyyellow,    -,            Nothing)),
+        Always(fgbg!(Title,                 gold,           -,            Bold)),
+        Always(fgbg!(Todo,                  bg,             red,          Bold)),
+        Always(fgbg!(ToolbarButton,         gold,           bg,           Bold)),
+        Always(fgbg!(ToolbarLine,           weakfg,         bgstrong,     Nothing)),
+        Always(fgbg!(Type,                  gold,           -,            Nothing)),
+        Always(fgbg!(Underlined,            skyblue,        -,            Underline)),
+        Always(fgbg!(VertSplit,             bgemphasis,     bg,           Nothing)),
+        Always(fgbg!(Visual,                -,              yaezakura,    Nothing)),
+        Always(fgbg!(WarningMsg,            mikan,          bgemphasis,   Nothing)),
+        Always(fgbg!(WildMenu,              bg,             gold,         Nothing)),
 
         // File type specific
         //
         // Markdown is highlighted with HTML highlights in gVim but link text doesn't
         // have a color. So define it here.
-        Always(fgbg!(cmakeArguments,        yellow,     -,            Nothing)),
-        Always(fgbg!(cmakeOperators,        red,        -,            Nothing)),
-        Always(fgbg!(DiffAdd,               -,          darkgreen,    Bold)),
-        Always(fgbg!(DiffChange,            -,          darkgold,     Bold)),
-        Always(fgbg!(DiffDelete,            fg,         mildred,      Bold)),
-        Always(fgbg!(DiffText,              -,          bg,           Nothing)),
-        Always(fgbg!(diffAdded,             green,      -,            Nothing)),
-        Always(fgbg!(diffFile,              yellow,     -,            Nothing)),
-        Always(fgbg!(diffIndexLine,         gold,       -,            Nothing)),
-        Always(fgbg!(diffNewFile,           yellow,     -,            Nothing)),
-        Always(fgbg!(diffRemoved,           red,        -,            Nothing)),
-        Always(fgbg!(gitCommitOverflow,     -,          mildred,      Nothing)),
-        Always(fgbg!(gitCommitSummary,      yellow,     -,            Nothing)),
-        Always(fgbg!(gitCommitSelectedFile, skyblue,    -,            Nothing)),
-        Always(fgbg!(gitconfigSection,      skyblue,    -,            Bold)),
-        Always(fgbg!(goBuiltins,            red,        -,            Nothing)),
-        Always(fgbg!(helpExample,           skyblue,    -,            Nothing)),
-        Always(fgbg!(helpCommand,           purple,     -,            Nothing)),
-        Always(fgbg!(htmlBold,              -,          bgemphasis,   Nothing)),
-        Always(fgbg!(htmlLinkText,          skyblue,    -,            Nothing)),
-        Always(fgbg!(htmlTagName,           orange,     -,            Nothing)),
-        Always(fgbg!(javaScriptBraces,      fg,         -,            Nothing)),
-        Always(fgbg!(makeCommands,          yellow,     -,            Nothing)),
-        Always(fgbg!(markdownCode,          yellow,     -,            Nothing)),
-        Always(fgbg!(markdownUrl,           weakfg,     -,            Nothing)),
-        Always(fgbg!(ocamlConstructor,      gold,       -,            Nothing)),
-        Always(fgbg!(ocamlKeyChar,          skyblue,    -,            Nothing)),
-        Always(fgbg!(ocamlKeyword,          gold   ,    -,            Nothing)),
-        Always(fgbg!(ocamlFunDef,           skyblue,    -,            Nothing)),
-        Always(fgbg!(plantumlColonLine,     skyblue,    -,            Nothing)),
-        Always(fgbg!(pythonBuiltin,         red,        -,            Nothing)),
-        Always(fgbg!(qfFileName,            gold,       -,            Nothing)),
-        Always(fgbg!(qfLineNr,              skyblue,    -,            Nothing)),
-        Always(fgbg!(rstEmphasis,           -,          bgemphasis,   Italic)),
-        Always(fgbg!(rstStrongEmphasis,     -,          bgstrong,     Bold)),
-        Always(fgbg!(rubyFunction,          yellow,     -,            Nothing)),
-        Always(fgbg!(rubyIdentifier,        yellow,     -,            Nothing)),
-        Always(fgbg!(rustEnumVariant,       gold,       -,            Nothing)),
-        Always(fgbg!(rustFuncCall,          fg,         -,            Nothing)),
-        Always(fgbg!(rustCommentLineDoc,    palepink,   -,            Nothing)),
-        Always(fgbg!(tomlTable,             skyblue,    -,            Nothing)),
-        Always(fgbg!(tomlTableArray,        skyblue,    -,            Nothing)),
-        Always(fgbg!(tomlKey,               gold,       -,            Nothing)),
-        Always(fgbg!(typescriptBraces,      fg,         -,            Nothing)),
-        Always(fgbg!(typescriptAsyncFuncKeyword, skyblue, -,          Nothing)),
-        Always(fgbg!(typescriptKeywordOp,   yellow,     -,            Bold)),
-        Always(fgbg!(vimfilerColumn__SizeLine, weakfg,  -,            Nothing)),
-        Always(fgbg!(vimfilerClosedFile,    green,      -,            Nothing)),
-        Always(fgbg!(vimCommand,            skyblue,    -,            Nothing)),
-        Always(fgbg!(wastListDelimiter,     fg,         -,            Nothing)),
-        Always(fgbg!(wastInstGeneral,       yellow,     -,            Nothing)),
-        Always(fgbg!(wastInstWithType,      yellow,     -,            Nothing)),
-        Always(fgbg!(wastUnnamedVar  ,      purple,     -,            Nothing)),
-        Always(fgbg!(zshDelimiter,          skyblue,    -,            Nothing)),
-        Always(fgbg!(zshPrecommand,         red,        -,            Nothing)),
-        Always(fgbg!(ghaworkflowAttrName,   yellow,     -,            Nothing)),
-        Always(fgbg!(debugPC,               bg,         skyblue,      Nothing)),
-        Always(fgbg!(debugBreakPoint,       bg,         gold,         Nothing)),
+        Always(fgbg!(cmakeArguments,        yellow,         -,            Nothing)),
+        Always(fgbg!(cmakeOperators,        red,            -,            Nothing)),
+        Always(fgbg!(DiffAdd,               -,              darkgreen,    Bold)),
+        Always(fgbg!(DiffChange,            -,              darkgold,     Bold)),
+        Always(fgbg!(DiffDelete,            fg,             mildred,      Bold)),
+        Always(fgbg!(DiffText,              -,              bg,           Nothing)),
+        Always(fgbg!(diffAdded,             green,          -,            Nothing)),
+        Always(fgbg!(diffFile,              yellow,         -,            Nothing)),
+        Always(fgbg!(diffIndexLine,         gold,           -,            Nothing)),
+        Always(fgbg!(diffNewFile,           yellow,         -,            Nothing)),
+        Always(fgbg!(diffRemoved,           red,            -,            Nothing)),
+        Always(fgbg!(gitCommitOverflow,     -,              mildred,      Nothing)),
+        Always(fgbg!(gitCommitSummary,      yellow,         -,            Nothing)),
+        Always(fgbg!(gitCommitSelectedFile, skyblue,        -,            Nothing)),
+        Always(fgbg!(gitconfigSection,      skyblue,        -,            Bold)),
+        Always(fgbg!(goBuiltins,            red,            -,            Nothing)),
+        Always(fgbg!(helpExample,           skyblue,        -,            Nothing)),
+        Always(fgbg!(helpCommand,           purple,         -,            Nothing)),
+        Always(fgbg!(htmlBold,              -,              bgemphasis,   Nothing)),
+        Always(fgbg!(htmlLinkText,          skyblue,        -,            Nothing)),
+        Always(fgbg!(htmlTagName,           orange,         -,            Nothing)),
+        Always(fgbg!(javaScriptBraces,      fg,             -,            Nothing)),
+        Always(fgbg!(makeCommands,          yellow,         -,            Nothing)),
+        Always(fgbg!(markdownCode,          yellow,         -,            Nothing)),
+        Always(fgbg!(markdownUrl,           weakfg,         -,            Nothing)),
+        Always(fgbg!(ocamlConstructor,      gold,           -,            Nothing)),
+        Always(fgbg!(ocamlKeyChar,          skyblue,        -,            Nothing)),
+        Always(fgbg!(ocamlKeyword,          gold   ,        -,            Nothing)),
+        Always(fgbg!(ocamlFunDef,           skyblue,        -,            Nothing)),
+        Always(fgbg!(plantumlColonLine,     skyblue,        -,            Nothing)),
+        Always(fgbg!(pythonBuiltin,         red,            -,            Nothing)),
+        Always(fgbg!(qfFileName,            gold,           -,            Nothing)),
+        Always(fgbg!(qfLineNr,              skyblue,        -,            Nothing)),
+        Always(fgbg!(rstEmphasis,           -,              bgemphasis,   Italic)),
+        Always(fgbg!(rstStrongEmphasis,     -,              bgstrong,     Bold)),
+        Always(fgbg!(rubyFunction,          yellow,         -,            Nothing)),
+        Always(fgbg!(rubyIdentifier,        yellow,         -,            Nothing)),
+        Always(fgbg!(rustEnumVariant,       gold,           -,            Nothing)),
+        Always(fgbg!(rustFuncCall,          fg,             -,            Nothing)),
+        Always(fgbg!(rustCommentLineDoc,    palepink,       -,            Nothing)),
+        Always(fgbg!(tomlTable,             skyblue,        -,            Nothing)),
+        Always(fgbg!(tomlTableArray,        skyblue,        -,            Nothing)),
+        Always(fgbg!(tomlKey,               gold,           -,            Nothing)),
+        Always(fgbg!(typescriptBraces,      fg,             -,            Nothing)),
+        Always(fgbg!(typescriptAsyncFuncKeyword, skyblue,   -,          Nothing)),
+        Always(fgbg!(typescriptKeywordOp,   yellow,         -,            Bold)),
+        Always(fgbg!(vimfilerColumn__SizeLine, weakfg,      -,            Nothing)),
+        Always(fgbg!(vimfilerClosedFile,    green,          -,            Nothing)),
+        Always(fgbg!(vimCommand,            skyblue,        -,            Nothing)),
+        Always(fgbg!(wastListDelimiter,     fg,             -,            Nothing)),
+        Always(fgbg!(wastInstGeneral,       yellow,         -,            Nothing)),
+        Always(fgbg!(wastInstWithType,      yellow,         -,            Nothing)),
+        Always(fgbg!(wastUnnamedVar  ,      purple,         -,            Nothing)),
+        Always(fgbg!(zshDelimiter,          skyblue,        -,            Nothing)),
+        Always(fgbg!(zshPrecommand,         red,            -,            Nothing)),
+        Always(fgbg!(ghaworkflowAttrName,   yellow,         -,            Nothing)),
+        Always(fgbg!(debugPC,               bg,             skyblue,      Nothing)),
+        Always(fgbg!(debugBreakPoint,       bg,             gold,         Nothing)),
 
         // Plugin specific
         //
         // Some plugins introduce its own highlight definitions. Adjust them for
         // working fine with this colorscheme.
-        Always(fgbg!(ALEWarningSign,        orange,     bgemphasis,   Bold)),
-        Always(fgbg!(ALEErrorSign,          bgemphasis, mildred,      Bold)),
-        Always(fgbg!(ALEInfoSign,           -,          light,        Nothing)),
-        Always(fgbg!(ALEError,              -,          mildred,      Nothing)),
-        Always(fgbg!(ALEWarning,            -,          darkgold,     Nothing)),
-        Always(fgbg!(Flake8_Error,          red,        bgemphasis,   Nothing)),
-        Always(fgbg!(Flake8_Warning,        yellow,     bgemphasis,   Nothing)),
-        Always(fgbg!(Flake8_PyFlake,        skyblue,    bgemphasis,   Nothing)),
-        Always(fgbg!(Flake8_Complexity,     skyblue,    bgemphasis,   Nothing)),
-        Always(fgbg!(Flake8_Naming,         skyblue,    bgemphasis,   Nothing)),
-        Always(fgbg!(SignifySignAdd,        green,      bgemphasis,   Nothing)),
-        Always(fgbg!(SignifySignChange,     yellow,     bgemphasis,   Nothing)),
+        Always(fgbg!(ALEWarningSign,        orange,         bgemphasis,   Bold)),
+        Always(fgbg!(ALEErrorSign,          bgemphasis,     mildred,      Bold)),
+        Always(fgbg!(ALEInfoSign,           -,              light,        Nothing)),
+        Always(fgbg!(ALEError,              -,              mildred,      Nothing)),
+        Always(fgbg!(ALEWarning,            -,              darkgold,     Nothing)),
+        Always(fgbg!(Flake8_Error,          red,            bgemphasis,   Nothing)),
+        Always(fgbg!(Flake8_Warning,        yellow,         bgemphasis,   Nothing)),
+        Always(fgbg!(Flake8_PyFlake,        skyblue,        bgemphasis,   Nothing)),
+        Always(fgbg!(Flake8_Complexity,     skyblue,        bgemphasis,   Nothing)),
+        Always(fgbg!(Flake8_Naming,         skyblue,        bgemphasis,   Nothing)),
+        Always(fgbg!(SignifySignAdd,        green,          bgemphasis,   Nothing)),
+        Always(fgbg!(SignifySignChange,     yellow,         bgemphasis,   Nothing)),
         Always(
-            fgbg!(SignifySignChangeDelete,  gold,       bgemphasis,   Nothing)
+            fgbg!(SignifySignChangeDelete,  gold,           bgemphasis,   Nothing)
         ),
-        Always(fgbg!(SignifySignDelete,     red,        bgemphasis,   Nothing)),
-        Always(fgbg!(CleverFChar,           bg,         red,          Nothing)),
-        Always(fgbg!(DirvishArg,            yellow,     -,            Bold)),
-        Always(fgbg!(EasyMotionTarget,      red,        -,            Bold)),
-        Always(fgbg!(EasyMotionShade,       weakfg,     bg,           Nothing)),
-        Always(fgbg!(GitGutterAdd,          green,      bgemphasis,   Nothing)),
-        Always(fgbg!(GitGutterChange,       yellow,     bgemphasis,   Nothing)),
-        Always(fgbg!(GitGutterChangeDelete, gold,       bgemphasis,   Nothing)),
-        Always(fgbg!(GitGutterDelete,       red,        bgemphasis,   Nothing)),
-        Always(fgbg!(HighlightedyankRegion, -,          bgemphasis,   Nothing)),
+        Always(fgbg!(SignifySignDelete,     red,            bgemphasis,   Nothing)),
+        Always(fgbg!(CleverFChar,           bg,             red,          Nothing)),
+        Always(fgbg!(DirvishArg,            yellow,         -,            Bold)),
+        Always(fgbg!(EasyMotionTarget,      red,            -,            Bold)),
+        Always(fgbg!(EasyMotionShade,       weakfg,         bg,           Nothing)),
+        Always(fgbg!(GitGutterAdd,          green,          bgemphasis,   Nothing)),
+        Always(fgbg!(GitGutterChange,       yellow,         bgemphasis,   Nothing)),
+        Always(fgbg!(GitGutterChangeDelete, gold,           bgemphasis,   Nothing)),
+        Always(fgbg!(GitGutterDelete,       red,            bgemphasis,   Nothing)),
+        Always(fgbg!(HighlightedyankRegion, -,              bgemphasis,   Nothing)),
         Switch(
-            fgbg!(EasyMotionIncCursor,      bg,         fg,           Nothing),
-            fgbg!(EasyMotionIncCursor,      -,          -,            Reverse),
+            fgbg!(EasyMotionIncCursor,      bg,             fg,           Nothing),
+            fgbg!(EasyMotionIncCursor,      -,              -,            Reverse),
         ),
-        Always(fgbg!(plugDeleted,           weakfg,     -,            Nothing)),
-        Always(fgbg!(ConflictMarker,        -,          mildred,      Nothing)),
+        Always(fgbg!(plugDeleted,           weakfg,         -,            Nothing)),
+        Always(fgbg!(ConflictMarker,        -,              mildred,      Nothing)),
     ];
 
     let term_colors = [
