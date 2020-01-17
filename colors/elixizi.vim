@@ -51,49 +51,55 @@ else
 endif
 
 let s:bg_gui = g:elixizi_high_contrast ? '#132132' : '#334152'
+let s:bg_color_gui = g:elixizi_high_contrast ? '#0e1b2c' : '#142941'
 let s:bgweaker_gui = g:elixizi_high_contrast ? '#213243' : '#3a4b5c'
 let s:darkgold_gui = g:elixizi_high_contrast ? '#484000' : '#685800'
 let s:fg_cterm = g:elixizi_high_contrast ? 231 : 230
 
-hi Boolean term=NONE guifg=#fd8489 cvim-color-elixizitermfg=210
-hi Character term=NONE guifg=#a9dd9d ctermfg=150
+exe 'hi' 'Normal' 'term=NONE' 'guifg=#faf9e8' 'ctermfg=231' 'guibg='.s:bg_color_gui 'ctermbg=233'
+exe 'hi' 'Cursor' 'term=NONE' 'guifg='.s:bg_color_gui 'ctermfg=233' 'guibg=#faf9e8' 'ctermbg=231'
+exe 'hi' 'Comment' 'term=NONE' 'guifg=#8a9aad' 'ctermfg=189' g:elixizi_italic_comments ? s:italic_attr : ''
+hi Boolean term=NONE guifg=#fe938c ctermfg=189
+hi Character term=NONE guifg=#aadc9f ctermfg=231
+hi Conditional term=NONE guifg=#7bdcfd ctermfg=189
+hi Constant term=NONE guifg=#c7b0c4 ctermfg=189
+hi Define term=NONE guifg=#7bdcfd ctermfg=189
+hi Float term=NONE guifg=#fe938c ctermfg=189
+hi Label term=NONE guifg=#7bdcfd ctermfg=189
+hi Function term=NONE guifg=#ea945d ctermfg=189
+exe 'hi' 'Identifier' 'term=NONE' 'guifg=#ea945d' 'ctermfg=189' s:italic_attr
+hi Number term=NONE guifg=#fe938c ctermfg=189
+hi Operater term=NONE guifg=#a7d0e8 ctermfg=189
+hi PreProc term=NONE guifg=#7bdcfd ctermfg=189
+hi Question term=NONE guifg=#a7d0e8 ctermfg=189
+hi Statement term=NONE guifg=#a7d0e8 ctermfg=189
+hi String term=NONE guifg=#aadc9f ctermfg=231
+hi Tag term=NONE guifg=#ea945d ctermfg=189
+hi Underlined term=NONE guifg=#7bdcfd ctermfg=189 gui=underline cterm=underline
+exe 'hi' 'Keyword' 'term=NONE' 'guifg=#ea945d' 'ctermfg=189' s:bold_attr
+hi Type term=NONE guifg=#e9b44c ctermfg=189
 hi ColorColumn term=NONE guibg=#536273 ctermbg=238
-exe 'hi' 'Comment' 'term=NONE' 'guifg=#8d9eb2' 'ctermfg=103' g:elixizi_italic_comments ? s:italic_attr : ''
 exe 'hi' 'Conceal' 'term=NONE' 'guifg=#fb8965' 'ctermfg=209' 'guibg='.s:bg_gui 'ctermbg=233'
-hi Conditional term=NONE guifg=#a8d2eb ctermfg=153
-hi Constant term=NONE guifg=#fd8489 ctermfg=210
-exe 'hi' 'Cursor' 'term=NONE' 'guifg='.s:bg_gui 'ctermfg=233' 'guibg=#fffeeb' 'ctermbg='.s:fg_cterm
 hi CursorColumn term=NONE guibg=#3a4b5c ctermbg=235
 hi CursorLine term=NONE guibg=#3a4b5c ctermbg=235 gui=NONE cterm=NONE
 hi CursorLineNr term=NONE guifg=#e7d5ff ctermfg=189 guibg=#536273 ctermbg=238
-hi Define term=NONE guifg=#77dcff ctermfg=117
 hi Directory term=NONE guifg=#a9dd9d ctermfg=150
 hi EndOfBuffer term=NONE guifg=#536273 ctermfg=238
 exe 'hi' 'Error' 'term=NONE' 'guifg=#fd8489' 'ctermfg=210' 'guibg=#3a4b5c' 'ctermbg=235' s:bold_attr
 exe 'hi' 'ErrorMsg' 'term=NONE' 'guifg=#fd8489' 'ctermfg=210' 'guibg='.s:bg_gui 'ctermbg=233' s:bold_attr
-hi Float term=NONE guifg=#fd8489 ctermfg=210
 exe 'hi' 'NormalFloat' 'term=NONE' 'guifg=#fffeeb' 'ctermfg='.s:fg_cterm 'guibg='.s:bgweaker_gui 'ctermbg=235'
 hi FoldColumn term=NONE guifg=#e7d5ff ctermfg=189 guibg=#3a4b5c ctermbg=235
 hi Folded term=NONE guifg=#e7d5ff ctermfg=189 guibg=#646f7c ctermbg=60
-hi Function term=NONE guifg=#f0aa8a ctermfg=216
-exe 'hi' 'Identifier' 'term=NONE' 'guifg=#fedf81' 'ctermfg=222' s:italic_attr
 hi IncSearch term=NONE guifg=NONE ctermfg=NONE guibg=#a9667a ctermbg=132 gui=underline cterm=underline
-exe 'hi' 'Keyword' 'term=NONE' 'guifg=#f0eaaa' 'ctermfg=229' s:bold_attr
-hi Label term=NONE guifg=#a8d2eb ctermfg=153
 hi LineNr term=NONE guifg=#788898 ctermfg=102 guibg=#3a4b5c ctermbg=235
 exe 'hi' 'MatchParen' 'term=NONE' 'guifg='.s:bg_gui 'ctermfg=233' 'guibg=#a9667a' 'ctermbg=132' s:bold_attr
 hi ModeMsg term=NONE guifg=#fedf81 ctermfg=222
 hi MoreMsg term=NONE guifg=#a9dd9d ctermfg=150
 hi NonText term=NONE guifg=#646f7c ctermfg=60
-exe 'hi' 'Normal' 'term=NONE' 'guifg=#fffeeb' 'ctermfg='.s:fg_cterm 'guibg='.s:bg_gui 'ctermbg=233'
-hi Number term=NONE guifg=#fd8489 ctermfg=210
-hi Operater term=NONE guifg=#77dcff ctermfg=117
 hi Pmenu term=NONE guifg=#e7d5ff ctermfg=189 guibg=#3a4b5c ctermbg=235
 hi PmenuSbar term=NONE guifg=#fedf81 ctermfg=222 guibg=#536273 ctermbg=238
 hi PmenuSel term=NONE guifg=#fedf81 ctermfg=222 guibg=#536273 ctermbg=238
 hi PmenuThumb term=NONE guifg=#fedf81 ctermfg=222 guibg=#8d9eb2 ctermbg=103
-hi PreProc term=NONE guifg=#77dcff ctermfg=117
-hi Question term=NONE guifg=#a8d2eb ctermfg=153
 hi Search term=NONE guifg=NONE ctermfg=NONE guibg=#605779 ctermbg=60 gui=underline cterm=underline
 exe 'hi' 'SignColumn' 'term=NONE' 'guifg=#fffeeb' 'ctermfg='.s:fg_cterm 'guibg=#3a4b5c' 'ctermbg=235'
 exe 'hi' 'Special' 'term=NONE' 'guifg=#f0eaaa' 'ctermfg=229' s:bold_attr
@@ -118,27 +124,30 @@ if s:gui_running
 else
     exe 'hi' 'SpellRare' 'term=NONE' 'guifg=#f0eaaa' 'ctermfg=229' 'guibg=NONE' 'ctermbg=NONE' 'guisp=#f0eaaa' s:undercurl_attr
 endif
-hi Statement term=NONE guifg=#a8d2eb ctermfg=153
 exe 'hi' 'StatusLine' 'term=NONE' 'guifg=#fffeeb' 'ctermfg='.s:fg_cterm 'guibg=#536273' 'ctermbg=238' s:bold_attr
 hi StatusLineNC term=NONE guifg=#8d9eb2 ctermfg=103 guibg=#3a4b5c ctermbg=235 gui=NONE cterm=NONE
 exe 'hi' 'StatusLineTerm' 'term=NONE' 'guifg=#fffeeb' 'ctermfg='.s:fg_cterm 'guibg=#536273' 'ctermbg=238' s:bold_attr
 hi StatusLineTermNC term=NONE guifg=#8d9eb2 ctermfg=103 guibg=#3a4b5c ctermbg=235 gui=NONE cterm=NONE
 exe 'hi' 'StorageClass' 'term=NONE' 'guifg=#fedf81' 'ctermfg=222' s:italic_attr
-hi String term=NONE guifg=#a9dd9d ctermfg=150
 hi TabLine term=NONE guifg=#8d9eb2 ctermfg=103 guibg=#536273 ctermbg=238
 hi TabLineFill term=NONE guifg=#3a4b5c ctermfg=235
 exe 'hi' 'TabLineSel' 'term=NONE' 'guifg=#fedf81' 'ctermfg=222' 'guibg='.s:bg_gui 'ctermbg=233' s:bold_attr
-hi Tag term=NONE guifg=#f0aa8a ctermfg=216
 exe 'hi' 'Title' 'term=NONE' 'guifg=#fedf81' 'ctermfg=222' s:bold_attr
 exe 'hi' 'Todo' 'term=NONE' 'guifg='.s:bg_gui 'ctermfg=233' 'guibg=#fd8489' 'ctermbg=210' s:bold_attr
 exe 'hi' 'ToolbarButton' 'term=NONE' 'guifg=#fedf81' 'ctermfg=222' 'guibg='.s:bg_gui 'ctermbg=233' s:bold_attr
 hi ToolbarLine term=NONE guifg=#8d9eb2 ctermfg=103 guibg=#536273 ctermbg=238
-hi Type term=NONE guifg=#fedf81 ctermfg=222
-hi Underlined term=NONE guifg=#a8d2eb ctermfg=153 gui=underline cterm=underline
 exe 'hi' 'VertSplit' 'term=NONE' 'guifg=#3a4b5c' 'ctermfg=235' 'guibg='.s:bg_gui 'ctermbg=233'
 hi Visual term=NONE guibg=#70495d ctermbg=95
 hi WarningMsg term=NONE guifg=#fb8965 ctermfg=209 guibg=#3a4b5c ctermbg=235
 exe 'hi' 'WildMenu' 'term=NONE' 'guifg='.s:bg_gui 'ctermfg=233' 'guibg=#fedf81' 'ctermbg=222'
+hi htmlTagName term=NONE guifg=#ea945d ctermfg=189
+hi rubyFunction term=NONE guifg=#ea945d ctermfg=189
+hi rubyIdentifier term=NONE guifg=#ea945d ctermfg=189
+hi elixirAtom term=NONE guifg=#c7b0c4 ctermfg=189
+hi elixirArguments term=NONE guifg=#e0e4cc ctermfg=189
+hi elixirMapDelimiter term=NONE guifg=#a7d0e8 ctermfg=189
+hi elixirStructDelimiter term=NONE guifg=#a7d0e8 ctermfg=189
+hi elixirId term=NONE guifg=#fffeec ctermfg=189
 hi cmakeArguments term=NONE guifg=#f0eaaa ctermfg=229
 hi cmakeOperators term=NONE guifg=#fd8489 ctermfg=210
 exe 'hi' 'DiffAdd' 'term=NONE' 'guibg=#5f8770' 'ctermbg=65' s:bold_attr
@@ -159,7 +168,6 @@ hi helpExample term=NONE guifg=#a8d2eb ctermfg=153
 hi helpCommand term=NONE guifg=#e7d5ff ctermfg=189
 hi htmlBold term=NONE guibg=#3a4b5c ctermbg=235
 hi htmlLinkText term=NONE guifg=#a8d2eb ctermfg=153
-hi htmlTagName term=NONE guifg=#f0aa8a ctermfg=216
 exe 'hi' 'javaScriptBraces' 'term=NONE' 'guifg=#fffeeb' 'ctermfg='.s:fg_cterm
 hi makeCommands term=NONE guifg=#f0eaaa ctermfg=229
 hi markdownCode term=NONE guifg=#f0eaaa ctermfg=229
@@ -174,8 +182,6 @@ hi qfFileName term=NONE guifg=#fedf81 ctermfg=222
 hi qfLineNr term=NONE guifg=#a8d2eb ctermfg=153
 exe 'hi' 'rstEmphasis' 'term=NONE' 'guibg=#3a4b5c' 'ctermbg=235' s:italic_attr
 exe 'hi' 'rstStrongEmphasis' 'term=NONE' 'guibg=#536273' 'ctermbg=238' s:bold_attr
-hi rubyFunction term=NONE guifg=#f0eaaa ctermfg=229
-hi rubyIdentifier term=NONE guifg=#f0eaaa ctermfg=229
 hi rustEnumVariant term=NONE guifg=#fedf81 ctermfg=222
 exe 'hi' 'rustFuncCall' 'term=NONE' 'guifg=#fffeeb' 'ctermfg='.s:fg_cterm
 hi rustCommentLineDoc term=NONE guifg=#e7c6b7 ctermfg=181
